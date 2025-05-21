@@ -50,16 +50,16 @@
 
             <!-- Virtual Box -->
             <p class="text-lg mb-4 text-white"><strong>Virtual Box:</strong><br>
-              <a href="images/virtualbox.png" target="_blank">
-                <img src="images/virtualbox.png" alt="Virtual Box Setup" class="w-full mb-4 rounded-lg shadow-lg">
+              <a href="Images/VirtualBox.PNG" target="_blank">
+                <img src="Images/virtualbox.PNG" alt="Virtual Box Setup" class="w-full mb-4 rounded-lg shadow-lg">
               </a>
               Pictured here is my virtual box setup, featuring the 4 VMs I used to conduct this project. The pfSense router has 3 network adapters, as seen in the network tab. The first one is a bridge adapter responsible for connecting the system to the internet via the host machine’s connection, and sharing that connection with the internal networks. The other two adapters are for internal networks, one private network where devices can communicate with each other, as well as one guest network.
             </p>
 
             <!-- pfSense -->
             <p class="text-lg mb-4 text-white"><strong>pfSense:</strong><br>
-              <a href="images/pfsense-console.png" target="_blank">
-                <img src="images/pfsense-console.png" alt="pfSense Console" class="w-full mb-4 rounded-lg shadow-lg">
+              <a href="Images/pfsense-console.PNG" target="_blank">
+                <img src="Images/pfsense-console.PNG" alt="pfSense Console" class="w-full mb-4 rounded-lg shadow-lg">
               </a>
               Pictured here is the pfSense console, showcasing the network comprised of the three subnets, 192.168.1.X, 192.168.2.X, and 192.168.3.X. The WAN interface is on the 192.168.1.X subnet, the same subnet the host system. The LAN where the Windows VMs will lie is bound to the 192.168.2.X, isolating it from the host network. The guest network is bound to the 192.168.3.X subnet, isolating it from all other traffic.
             </p>
@@ -67,15 +67,15 @@
             <!-- File Transfer -->
             <p class="text-lg mb-4 text-white"><strong>File Transfer:</strong><br>
               <a href="images/sftp-transfer.png" target="_blank">
-                <img src="images/sftp-transfer.png" alt="File Transfer via SFTP" class="w-full mb-4 rounded-lg shadow-lg">
+                <img src="Images/sftp-transfer.PNG" alt="File Transfer via SFTP" class="w-full mb-4 rounded-lg shadow-lg">
               </a>
               Pictured here are my two Windows VMs communicating with each other over the network. You can see the devices recognizing each other on the ARP table, successfully pinging each other, and a text document being transferred over the network via SFTP.
             </p>
 
             <!-- Guest Network -->
             <p class="text-lg mb-4 text-white"><strong>Guest Network:</strong><br>
-              <a href="images/captive-portal.png" target="_blank">
-                <img src="images/captive-portal.png" alt="Captive Portal" class="w-full mb-4 rounded-lg shadow-lg">
+              <a href="Images/captive-portal.PNG" target="_blank">
+                <img src="Images/captive-portal.PNG" alt="Captive Portal" class="w-full mb-4 rounded-lg shadow-lg">
               </a>
               Pictured here are the pfSense web interface and the Lubuntu VM. On the pfSense web interface, you can see an ARP table showcasing every device connected to the router. You can see the Windows VMs as well as the Lubuntu VM on different subnets. On the Lubuntu VM, you can see the Captive Portal that the user must interact with in order to join the network.
             </p>
