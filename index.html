@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shehou's Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-950 text-white font-sans">
+  <header class="bg-gray-900 shadow-md">
+    <nav class="max-w-6xl mx-auto flex items-center justify-between p-6">
+      <div class="text-xl font-bold text-indigo-400">Shehou Fisiru</div>
+      <ul class="flex gap-8 text-sm">
+        <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-400">Projects</a></li>
+        <li><a href="#about" class="hover:text-indigo-400">About</a></li>
+        <li><a href="#contact" class="hover:text-indigo-400">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-[80vh] flex items-center justify-center text-center px-4" 
+  style="background-image: url('images/hero.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="bg-black bg-opacity-50 p-8 rounded-lg">
+    <h1 class="text-4xl sm:text-5xl font-bold mb-4 text-white">Welcome to My Tech Journey</h1>
+    <p class="text-gray-300 mb-6">Documenting my path in tech. See the projects, skills, and learning that drive my passion for technology.</p>
+    <a href="projects.html" class="bg-indigo-500 hover:bg-indigo-600 text-white px-6 py-2 rounded-lg transition">View My Projects</a>
+  </div>
+</section>
+
+  <section id="about" class="py-20 px-4">
+    <h2 class="text-3xl font-bold text-center mb-6">About Me</h2>
+    <p class="max-w-3xl mx-auto text-center text-gray-300">
+      Hello! I'm Shehou, an aspiring IT professional with a passion for technology and problem-solving. Over the years, I've developed a deep interest in networking and cybersecurity, which I am currently exploring through coursework, certifications, and personal projects.
+    </p>
+    <p class="max-w-3xl mx-auto text-center text-gray-300">
+      Currently, I have my CompTIA A+ certification, with plans to continue my education in network and security fields. I enjoy building and optimizing systems, whether it's setting up virtual networks, experimenting with network tools, or exploring new tech. I have a love for learning and sharing my knowledge, which led me to start documenting my projects and experiences on this website. My goal is to continue growing as a professional and eventually contribute to the tech community, solving real-world problems with innovative solutions.
+    </p>
+  </section>
+
+  <section id="projects" class="py-20 px-4 bg-gray-900">
+    <h2 class="text-3xl font-bold text-center mb-10">My Projects</h2>
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-lg shadow hover:shadow-lg transition">
+        <h3 class="text-xl font-semibold mb-2">Network Segmentation Simulation</h3>
+        <p class="text-gray-400 mb-4">A simulation of a network enviornment featuring multiple subnets to segment communication.</p>
+        <a href="projects.html" class="text-indigo-400 hover:underline">View Project</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 px-4 text-center">
+    <a href="mailto:fisirushehou@gmail.com" class="inline-block bg-indigo-500 hover:bg-indigo-600 text-white text-xl font-bold px-8 py-3 rounded-full transition">
+      Contact Me
+    </a>
+  </section>
+
+</body>
+</html>
