@@ -39,5 +39,113 @@
     </div>
   </main>
 
+<<<<<<< HEAD
+=======
+      <!-- Project 1 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-4 text-white cursor-pointer" onclick="toggleProject(1)">
+          Network Segmentation Simulation
+          <span class="arrow" id="arrow1">▼</span>
+        </h3>
+        <div id="project1" class="project-info text-gray-400 hidden">
+          <p class="text-lg mb-4 text-white"><strong>Purpose:</strong><br>
+            The goal is to create a network setup that segments different parts of a network into isolated areas, making it more secure and organized. This can help reduce risks of network breaches and improve performance by limiting broadcast traffic.</p>
+
+          <p class="text-lg mb-4 text-white"><strong>Setup:</strong><br>
+            pfSense is used as a firewall/router to manage and segment the network. Four VMs were created, with one running the pfSense OS, two running Windows and one running Lubuntu. The Windows VMs were placed on one subnet, while the Lubuntu VM was placed on another. The VMs are connected through pfSense, which controls traffic between the segments.</p>
+
+          <p class="text-lg mb-4 text-white"><strong>Key Features:</strong><br>
+            • <strong>Network Segmentation:</strong> VMs are segmented into different subnets, a main network, and a guest network.<br>
+            • <strong>Security:</strong> pfSense controls communication between these segments, ensuring that sensitive data is isolated from other parts of the network.<br>
+            • <strong>File Sharing via SFTP:</strong> Demonstrated how two VMs on the same subnet can communicate via SFTP to share files securely.<br>
+            • <strong>Captive Portal:</strong> A separate subnet (for guests) includes a captive portal, limiting access to the network and improving security for users on the guest network.</p>
+
+          <div class="space-y-10">
+
+            <!-- Virtual Box -->
+            <p class="text-lg mb-4 text-white"><strong>Virtual Box:</strong><br>
+              <a href="Images/VirtualBox.PNG" target="_blank">
+                <img src="Images/VirtualBox.PNG" alt="Virtual Box Setup" class="w-full mb-4 rounded-lg shadow-lg">
+              </a>
+              Pictured here is my virtual box setup, featuring the 4 VMs I used to conduct this project. The pfSense router has 3 network adapters, as seen in the network tab. The first one is a bridge adapter responsible for connecting the system to the internet via the host machine’s connection, and sharing that connection with the internal networks. The other two adapters are for internal networks, one private network where devices can communicate with each other, as well as one guest network.
+            </p>
+
+            <!-- pfSense -->
+            <p class="text-lg mb-4 text-white"><strong>pfSense:</strong><br>
+              <a href="Images/pfsense-console.PNG" target="_blank">
+                <img src="Images/pfsense-console.PNG" alt="pfSense Console" class="w-full mb-4 rounded-lg shadow-lg">
+              </a>
+              Pictured here is the pfSense console, showcasing the network comprised of the three subnets, 192.168.1.X, 192.168.2.X, and 192.168.3.X. The WAN interface is on the 192.168.1.X subnet, the same subnet the host system. The LAN where the Windows VMs will lie is bound to the 192.168.2.X, isolating it from the host network. The guest network is bound to the 192.168.3.X subnet, isolating it from all other traffic.
+            </p>
+
+            <!-- File Transfer -->
+            <p class="text-lg mb-4 text-white"><strong>File Transfer:</strong><br>
+              <a href="images/sftp-transfer.png" target="_blank">
+                <img src="Images/sftp-transfer.PNG" alt="File Transfer via SFTP" class="w-full mb-4 rounded-lg shadow-lg">
+              </a>
+              Pictured here are my two Windows VMs communicating with each other over the network. You can see the devices recognizing each other on the ARP table, successfully pinging each other, and a text document being transferred over the network via SFTP.
+            </p>
+
+            <!-- Guest Network -->
+            <p class="text-lg mb-4 text-white"><strong>Guest Network:</strong><br>
+              <a href="Images/captive-portal.PNG" target="_blank">
+                <img src="Images/captive-portal.PNG" alt="Captive Portal" class="w-full mb-4 rounded-lg shadow-lg">
+              </a>
+              Pictured here are the pfSense web interface and the Lubuntu VM. On the pfSense web interface, you can see an ARP table showcasing every device connected to the router. You can see the Windows VMs as well as the Lubuntu VM on different subnets. On the Lubuntu VM, you can see the Captive Portal that the user must interact with in order to join the network.
+            </p>
+
+            <!-- Video Header -->
+<p class="text-lg mb-1 text-white"><strong>Video:</strong></p>
+
+<!-- Video -->
+<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg mb-2">
+  <iframe 
+    class="absolute top-0 left-0 w-full h-full"
+    src="https://www.youtube.com/embed/_j8d_NJeEcE"
+    title="Network Simulation Video"
+    frameborder="0"
+    allowfullscreen
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
+  </iframe>
+</div>
+
+<!-- Caption -->
+<p class="text-lg text-white mb-4">
+  Here is the video of me simulating the network environment.
+</p>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
+        <h3 class="text-xl font-semibold mb-4 text-white cursor-pointer" onclick="toggleProject(2)">
+          Project 2
+          <span class="arrow" id="arrow2">▼</span>
+        </h3>
+        <div id="project2" class="project-info text-gray-400 hidden">
+          <p class="text-lg mb-4 text-white">Coming Soon.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script>
+    function toggleProject(projectNumber) {
+      var projectInfo = document.getElementById('project' + projectNumber);
+      var arrow = document.getElementById('arrow' + projectNumber);
+
+      if (projectInfo.classList.contains('hidden')) {
+        projectInfo.classList.remove('hidden');
+        arrow.style.transform = 'rotate(180deg)';
+      } else {
+        projectInfo.classList.add('hidden');
+        arrow.style.transform = 'rotate(0deg)';
+      }
+    }
+  </script>
+>>>>>>> 83d67055c81be1dc36ca7955ca9aa87fa6090d12
 </body>
 </html>
