@@ -2,135 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shehou's Projects</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects - Shehou's Portfolio</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-950 text-white font-sans text-base">
-  <header class="bg-gray-900 shadow-md">
+<body class="bg-gray-900 text-gray-300 font-sans">
+
+  <header class="bg-gray-800 shadow-md">
     <nav class="max-w-6xl mx-auto flex items-center justify-between p-6">
-      <div class="text-xl font-bold text-indigo-400">Shehou Fisiru</div>
+      <div class="text-xl font-bold text-indigo-400 cursor-pointer" onclick="location.href='index.html'">Shehou Fisiru</div>
       <ul class="flex gap-8 text-sm">
-        <li><a href="index.html" class="hover:text-indigo-400">Home</a></li>
-        <li><a href="projects.html" class="hover:text-indigo-400">Projects</a></li>
-        <li><a href="index.html#about" class="hover:text-indigo-400">About</a></li> <!-- Updated link -->
-        <li><a href="index.html#contact" class="text-white hover:text-gray-400">Contact</a></li>
+        <li><a href="index.html" class="hover:text-indigo-400 text-gray-300">Home</a></li>
+        <li><a href="projects.html" class="hover:text-indigo-400 text-indigo-400 font-semibold">Projects</a></li>
+        <li><a href="index.html#about" class="hover:text-indigo-400 text-gray-300">About</a></li>
+        <li><a href="index.html#contact" class="text-gray-300 hover:text-gray-400">Contact</a></li>
       </ul>
     </nav>
   </header>
 
-  <section id="projects" class="py-28 px-6 bg-gray-900">
-    <div class="bg-gray-800 p-4 rounded-lg shadow-lg mb-10">
-      <h2 class="text-3xl font-bold text-center text-indigo-400">My Projects</h2>
+  <main class="max-w-6xl mx-auto px-6 py-28">
+    <h1 class="text-4xl font-bold text-indigo-400 mb-12 text-center">My Projects</h1>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+      <a href="project1.html" class="bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition text-center text-white">
+        <h2 class="text-2xl font-semibold mb-4">Project 1: Network Segmentation Simulation</h2>
+        <p class="text-gray-400">A simulation of a network enviornment featuring multiple subnets to segment communication.</p>
+      </a>
+      <a href="project2.html" class="bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition text-center text-white">
+        <h2 class="text-2xl font-semibold mb-4">Project 2: Web Server Simulation</h2>
+        <p class="text-gray-400">Deployed an Apache web server in a DMZ and made it accessible from the public internet using port forwarding and firewall rules.</p>
+      </a>
+      <a href="project3.html" class="bg-gray-800 rounded-lg p-8 shadow-lg hover:shadow-xl transition text-center text-white">
+        <h2 class="text-2xl font-semibold mb-4">Project 3</h2>
+        <p class="text-gray-400">Coming Soon</p>
+      </a>
     </div>
-    
-    <p class="text-center text-white mb-12 text-xl">Welcome to my projects page! Here are some of the projects I've worked on:</p>
-    <div class="space-y-10 max-w-6xl mx-auto">
+  </main>
 
-      <!-- Project 1 -->
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-4 text-white cursor-pointer" onclick="toggleProject(1)">
-          Network Segmentation Simulation
-          <span class="arrow" id="arrow1">▼</span>
-        </h3>
-        <div id="project1" class="project-info text-gray-400 hidden">
-          <p class="text-lg mb-4 text-white"><strong>Purpose:</strong><br>
-            The goal is to create a network setup that segments different parts of a network into isolated areas, making it more secure and organized. This can help reduce risks of network breaches and improve performance by limiting broadcast traffic.</p>
-
-          <p class="text-lg mb-4 text-white"><strong>Setup:</strong><br>
-            pfSense is used as a firewall/router to manage and segment the network. Four VMs were created, with one running the pfSense OS, two running Windows and one running Lubuntu. The Windows VMs were placed on one subnet, while the Lubuntu VM was placed on another. The VMs are connected through pfSense, which controls traffic between the segments.</p>
-
-          <p class="text-lg mb-4 text-white"><strong>Key Features:</strong><br>
-            • <strong>Network Segmentation:</strong> VMs are segmented into different subnets, a main network, and a guest network.<br>
-            • <strong>Security:</strong> pfSense controls communication between these segments, ensuring that sensitive data is isolated from other parts of the network.<br>
-            • <strong>File Sharing via SFTP:</strong> Demonstrated how two VMs on the same subnet can communicate via SFTP to share files securely.<br>
-            • <strong>Captive Portal:</strong> A separate subnet (for guests) includes a captive portal, limiting access to the network and improving security for users on the guest network.</p>
-
-          <div class="space-y-10">
-
-            <!-- Virtual Box -->
-            <p class="text-lg mb-4 text-white"><strong>Virtual Box:</strong><br>
-              <a href="images/virtualbox.png" target="_blank">
-                <img src="images/virtualbox.png" alt="Virtual Box Setup" class="w-full mb-4 rounded-lg shadow-lg">
-              </a>
-              Pictured here is my virtual box setup, featuring the 4 VMs I used to conduct this project. The pfSense router has 3 network adapters, as seen in the network tab. The first one is a bridge adapter responsible for connecting the system to the internet via the host machine’s connection, and sharing that connection with the internal networks. The other two adapters are for internal networks, one private network where devices can communicate with each other, as well as one guest network.
-            </p>
-
-            <!-- pfSense -->
-            <p class="text-lg mb-4 text-white"><strong>pfSense:</strong><br>
-              <a href="images/pfsense-console.png" target="_blank">
-                <img src="images/pfsense-console.png" alt="pfSense Console" class="w-full mb-4 rounded-lg shadow-lg">
-              </a>
-              Pictured here is the pfSense console, showcasing the network comprised of the three subnets, 192.168.1.X, 192.168.2.X, and 192.168.3.X. The WAN interface is on the 192.168.1.X subnet, the same subnet the host system. The LAN where the Windows VMs will lie is bound to the 192.168.2.X, isolating it from the host network. The guest network is bound to the 192.168.3.X subnet, isolating it from all other traffic.
-            </p>
-
-            <!-- File Transfer -->
-            <p class="text-lg mb-4 text-white"><strong>File Transfer:</strong><br>
-              <a href="images/sftp-transfer.png" target="_blank">
-                <img src="images/sftp-transfer.png" alt="File Transfer via SFTP" class="w-full mb-4 rounded-lg shadow-lg">
-              </a>
-              Pictured here are my two Windows VMs communicating with each other over the network. You can see the devices recognizing each other on the ARP table, successfully pinging each other, and a text document being transferred over the network via SFTP.
-            </p>
-
-            <!-- Guest Network -->
-            <p class="text-lg mb-4 text-white"><strong>Guest Network:</strong><br>
-              <a href="images/captive-portal.png" target="_blank">
-                <img src="images/captive-portal.png" alt="Captive Portal" class="w-full mb-4 rounded-lg shadow-lg">
-              </a>
-              Pictured here are the pfSense web interface and the Lubuntu VM. On the pfSense web interface, you can see an ARP table showcasing every device connected to the router. You can see the Windows VMs as well as the Lubuntu VM on different subnets. On the Lubuntu VM, you can see the Captive Portal that the user must interact with in order to join the network.
-            </p>
-
-            <!-- Video Header -->
-<p class="text-lg mb-1 text-white"><strong>Video:</strong></p>
-
-<!-- Video -->
-<div class="relative pb-[56.25%] h-0 overflow-hidden rounded-lg mb-2">
-  <iframe 
-    class="absolute top-0 left-0 w-full h-full"
-    src="https://www.youtube.com/embed/_j8d_NJeEcE"
-    title="Network Simulation Video"
-    frameborder="0"
-    allowfullscreen
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share">
-  </iframe>
-</div>
-
-<!-- Caption -->
-<p class="text-lg text-white mb-4">
-  Here is the video of me simulating the network environment.
-</p>
-
-          </div>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition">
-        <h3 class="text-xl font-semibold mb-4 text-white cursor-pointer" onclick="toggleProject(2)">
-          Project 2
-          <span class="arrow" id="arrow2">▼</span>
-        </h3>
-        <div id="project2" class="project-info text-gray-400 hidden">
-          <p class="text-lg mb-4 text-white">Coming Soon.</p>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <script>
-    function toggleProject(projectNumber) {
-      var projectInfo = document.getElementById('project' + projectNumber);
-      var arrow = document.getElementById('arrow' + projectNumber);
-
-      if (projectInfo.classList.contains('hidden')) {
-        projectInfo.classList.remove('hidden');
-        arrow.style.transform = 'rotate(180deg)';
-      } else {
-        projectInfo.classList.add('hidden');
-        arrow.style.transform = 'rotate(0deg)';
-      }
-    }
-  </script>
 </body>
 </html>

@@ -58,7 +58,6 @@ header nav ul li a {
     white-space: normal !important;
 }
 
-
 .projects {
     padding: 3rem 2rem;
     background-color: #fff;
@@ -70,6 +69,30 @@ header nav ul li a {
     color: #666;
 }
 
+/* Smooth dropdown animation for project info */
+.project-info {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.project-info.show {
+    max-height: 1000px; /* adjust if needed to fit content */
+}
+
+.project-title {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.arrow {
+    transition: transform 0.4s ease;
+}
+
+/* Footer */
 footer {
     background-color: #3e4b58;
     color: #fff;
