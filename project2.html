@@ -37,40 +37,40 @@
         • <strong>Apache Web Server:</strong> Apache was installed on a Lubuntu VM, with the default index page replaced by my custom test page.</p>
 
       <p class="text-lg text-white font-semibold" style="margin-bottom: 24px;">DMZ:</p>
-      <a href="Images/dmz.png" target="_blank">
-        <img src="Images/dmz.png" alt="DMZ IP Address and Subnets" class="w-full rounded-lg shadow-lg mb-4" />
+      <a href="Images/dmz.PNG" target="_blank">
+        <img src="Images/dmz.PNG" alt="DMZ IP Address and Subnets" class="w-full rounded-lg shadow-lg mb-4" />
       </a>
       <p class="text-lg text-gray-300">
         Pictured here is the IP address of the VM hosting the web server, alongside the four subnets of my virtual network. You might recall from project 1 that the first subnet, 192.168.1.X is where the pfSense VM lies, alongside my regular network devices, serving as a bridged adaptor allowing the other VMs to access the internet. The next two subnets house the main LAN devices and the guest devices, while the newly created subnet, 192.168.4.X, hosts solely the web server.
       </p>
 
       <p class="text-lg text-white font-semibold" style="margin-bottom: 24px;">ISP Port Forwarding:</p>
-      <a href="Images/portforwardisp.png" target="_blank">
-        <img src="Images/portforwardisp.png" alt="ISP Router Port Forwarding" class="w-full rounded-lg shadow-lg mb-4" />
+      <a href="Images/portforwardisp.PNG" target="_blank">
+        <img src="Images/portforwardisp.PNG" alt="ISP Router Port Forwarding" class="w-full rounded-lg shadow-lg mb-4" />
       </a>
       <p class="text-lg text-gray-300">
         Pictured here is the web interface for my router as provided by my ISP. Direct your attention to the rule titled “Web”. It is forwarding traffic from port 25566 to the IP address of my pfSense router, as you can see in the prior image, to port 80. This is because I discovered, through trial and error, that port 80 is blocked by default by most ISPs. In order to counteract this, I assigned a random port number and forwarded the traffic on that port to port 80. I simply chose the number after 25565, as you can see in the first port forwarding rule, which is for my personal game server and unrelated to this project. The “test” rule came from me troubleshooting port 80, while the last two are also unrelated to the project.
       </p>
 
       <p class="text-lg text-white font-semibold" style="margin-bottom: 24px;">pfSense Port Forwarding:</p>
-      <a href="Images/portforwardpf.png" target="_blank">
-        <img src="Images/portforwardpf.png" alt="pfSense Router Port Forwarding" class="w-full rounded-lg shadow-lg mb-4" />
+      <a href="Images/portforwardpf.PNG" target="_blank">
+        <img src="Images/portforwardpf.PNG" alt="pfSense Router Port Forwarding" class="w-full rounded-lg shadow-lg mb-4" />
       </a>
       <p class="text-lg text-gray-300">
         Pictured here is the port forwarding web interface for the pfSense router. Here, the traffic that was relayed to my pfSense router from my ISP’s router, thanks to my first port forwarding rule, is forwarded to my web server’s IP address.
       </p>
 
       <p class="text-lg text-white font-semibold" style="margin-bottom: 24px;">Firewall:</p>
-      <a href="Images/firewall.png" target="_blank">
-        <img src="Images/firewall.png" alt="Firewall Rule" class="w-full rounded-lg shadow-lg mb-4" />
+      <a href="Images/firewall.PNG" target="_blank">
+        <img src="Images/firewall.PNG" alt="Firewall Rule" class="w-full rounded-lg shadow-lg mb-4" />
       </a>
       <p class="text-lg text-gray-300">
         Pictured here is the firewall rule I created in order to allow communication on port 80 from external devices.
       </p>
 
       <p class="text-lg text-white font-semibold" style="margin-bottom: 24px;">Server Accessibility:</p>
-      <a href="Images/phone.png" target="_blank">
-        <img src="Images/phone.png" alt="Server Accessibility from External Device" class="mx-auto rounded-lg shadow-lg max-h-[500px] w-auto max-w-full mb-4" />
+      <a href="Images/phone.PNG" target="_blank">
+        <img src="Images/phone.PNG" alt="Server Accessibility from External Device" class="mx-auto rounded-lg shadow-lg max-h-[500px] w-auto max-w-full mb-4" />
       </a>
       <p class="text-lg text-gray-300">
         Finally, pictured here is my website being accessed from an external device. As you can see in the image, Wi-Fi is disabled, so I am not connected to my local network, and my website is accessible to any device. I did not have a domain name, so the website was accessed by typing my public IP address, followed by the port number (e.g., my.public.address:25566).
